@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Patrones.Presentacion.Creacionales;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Patrones
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnFactoryMethod_Click(object sender, EventArgs e)
+        {
+            FormFactory fFactoryMethod = new FormFactory();
+            fFactoryMethod.Show();
         }
     }
 }

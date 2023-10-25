@@ -52,8 +52,25 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patrones\Creacionales\Factory Method\DatosVehiculo.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\Electrico.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\Hibrido.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\IVehiculo.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\VehiculoCreator.cs" />
+    <Compile Include="Presentacion\Creacionales\FormFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Creacionales\FormFactory.Designer.cs">
+      <DependentUpon>FormFactory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Creacionales\FormFactory.resx">
+      <DependentUpon>FormFactory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Patrones\Clases\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
