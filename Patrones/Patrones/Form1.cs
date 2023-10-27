@@ -23,5 +23,11 @@ namespace Patrones
             FormFactory fFactoryMethod = new FormFactory();
             fFactoryMethod.Show();
         }
+
+        private void btnAbstractFactory_Click(object sender, EventArgs e)
+        {
+            FormAbstractFactory fAbstractFactoryMethod = new FormAbstractFactory();
+            fAbstractFactoryMethod.Show();
+        }
     }
 }

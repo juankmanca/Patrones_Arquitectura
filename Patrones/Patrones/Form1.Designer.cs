@@ -113,6 +113,7 @@
             this.btnAbstractFactory.TabIndex = 1;
             this.btnAbstractFactory.Text = "ABSTRACT FACTORY";
             this.btnAbstractFactory.UseVisualStyleBackColor = false;
+            this.btnAbstractFactory.Click += new System.EventHandler(this.btnAbstractFactory_Click);
             // 
             // btnFactoryMethod
             // 

@@ -57,6 +57,12 @@
     <Compile Include="Patrones\Creacionales\Factory Method\Hibrido.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\IVehiculo.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\VehiculoCreator.cs" />
+    <Compile Include="Presentacion\Creacionales\FormAbstractFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Creacionales\FormAbstractFactory.Designer.cs">
+      <DependentUpon>FormAbstractFactory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Creacionales\FormFactory.cs">
       <SubType>Form</SubType>
     </Compile>
