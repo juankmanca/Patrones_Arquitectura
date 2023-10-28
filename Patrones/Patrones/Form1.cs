@@ -29,5 +29,10 @@ namespace Patrones
             FormAbstractFactory fAbstractFactoryMethod = new FormAbstractFactory();
             fAbstractFactoryMethod.Show();
         }
+
+        private void btnBaseDatos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

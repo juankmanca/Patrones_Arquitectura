@@ -9,12 +9,21 @@
         public string Consultar()
         {
             var Vehiculo = FactoryMethod();
-            Vehiculo.ConsultarPlaca();
-            Vehiculo.ConsultarVelocidadMaxima();
-            return $"El Vehiculo de placas {DatosVehiculo.Placa} \n" +
+            //Vehiculo.ConsultarPlaca();
+            //Vehiculo.ConsultarVelocidadMaxima();
+            return
+                 $"El Vehiculo de marca {DatosVehiculo.Marca} \n" +
+                $"El Vehiculo de placas {DatosVehiculo.Placa} \n" +
                 $"Con Velocidad Maxima de: {DatosVehiculo.Velocidad}Km\\h \n" +
                 $"El tipo de vehiculo es {DatosVehiculo.TipoVehiculo} \n" +
                 "El CRUD implementado es: " + Vehiculo.CRUD();
         }
+
+        public string Insertar()
+        {
+            return $"INSERT INTO Vehiculos (TipoVehiculo, Marca, Velocidad, Placa) " +
+                  $"VALUES ('{DatosVehiculo.TipoVehiculo}', '{DatosVehiculo.Marca}', {DatosVehiculo.Velocidad}, '{DatosVehiculo.Placa}');";
+        }
+
     }
 }

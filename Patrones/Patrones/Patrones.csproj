@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patrones\Clases\FactoryBDConnection.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\DatosVehiculo.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\Electrico.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\Hibrido.cs" />
@@ -99,8 +100,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Patrones\Clases\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -65,6 +65,7 @@
             this.btnBaseDatos.TabIndex = 5;
             this.btnBaseDatos.Text = "BASE DATOS";
             this.btnBaseDatos.UseVisualStyleBackColor = false;
+            this.btnBaseDatos.Click += new System.EventHandler(this.btnBaseDatos_Click);
             // 
             // btnSingleton
             // 

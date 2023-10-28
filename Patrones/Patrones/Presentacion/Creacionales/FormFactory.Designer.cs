@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +41,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.grdVehiculo = new System.Windows.Forms.DataGridView();
+            this.vehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.grdVehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,7 +139,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(216, 192);
+            this.label6.Location = new System.Drawing.Point(79, 355);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 11;
@@ -142,17 +148,37 @@
             // txtRespuesta
             // 
             this.txtRespuesta.AutoSize = true;
-            this.txtRespuesta.Location = new System.Drawing.Point(216, 220);
+            this.txtRespuesta.Location = new System.Drawing.Point(79, 383);
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(28, 13);
             this.txtRespuesta.TabIndex = 12;
             this.txtRespuesta.Text = "R\\\\ ";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(672, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(152, 19);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "LISTA VEHICULOS";
+            // 
+            // grdVehiculo
+            // 
+            this.grdVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVehiculo.Location = new System.Drawing.Point(473, 56);
+            this.grdVehiculo.Name = "grdVehiculo";
+            this.grdVehiculo.Size = new System.Drawing.Size(545, 296);
+            this.grdVehiculo.TabIndex = 48;
+            // 
             // FormFactory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1039, 556);
+            this.Controls.Add(this.grdVehiculo);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtRespuesta);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -167,6 +193,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FormFactory";
             this.Text = "FormFactory";
+            ((System.ComponentModel.ISupportInitialize)(this.grdVehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +214,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label txtRespuesta;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView grdVehiculo;
+        private System.Windows.Forms.BindingSource vehiculosBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoVehiculoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn velocidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
     }
 }
