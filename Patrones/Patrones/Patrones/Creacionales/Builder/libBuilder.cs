@@ -9,6 +9,7 @@ namespace Patrones.Patrones.Creacionales.Builder
         public IList<Educacion> FormacionAcademica;
         public IList<Trabajo> ExperienciaLaboral;
         public IList<Referencias> ReferenciasLaborales;
+        public IList<Skills> Habilidades;
     }
     public class DatosPersonales
     {
@@ -38,6 +39,11 @@ namespace Patrones.Patrones.Creacionales.Builder
         public string Empresa { get; set; }
         public string Telefono { get; set; }
     }
+    public class Skills
+    {
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+    }
     public class HojaVidaBuilder
     {
         private readonly HojaVida hojaVida = new HojaVida();
@@ -47,6 +53,7 @@ namespace Patrones.Patrones.Creacionales.Builder
             hojaVida.FormacionAcademica = new List<Educacion>();
             hojaVida.ExperienciaLaboral = new List<Trabajo>();
             hojaVida.ReferenciasLaborales = new List<Referencias>();
+            hojaVida.Habilidades = new List<Skills>();
         }
         public DatosPersonalesBuilder AgregarDatosPersonales()
         {
@@ -57,6 +64,7 @@ namespace Patrones.Patrones.Creacionales.Builder
             return new ColegioBuilder(this, hojaVida);
         }
     }
+
     public class DatosPersonalesBuilder
     {
         private readonly DatosPersonales datosPersonales = new DatosPersonales();
@@ -213,6 +221,7 @@ namespace Patrones.Patrones.Creacionales.Builder
             return new ReferenciaLaboralBuilder(hojaVidaBuilder, hojaVida);
         }
     }
+
     public class ReferenciaLaboralBuilder
     {
         private readonly Referencias referencia = new Referencias();
@@ -248,10 +257,51 @@ namespace Patrones.Patrones.Creacionales.Builder
             hojaVida.ReferenciasLaborales.Add(referencia);
             return new ReferenciaLaboralBuilder(hojaVidaBuilder, hojaVida);
         }
+
+        public HabilidadesBuilder AgregarHabilidades()
+        {
+            hojaVida.ReferenciasLaborales.Add(referencia);
+            return new HabilidadesBuilder(hojaVidaBuilder, hojaVida);
+        }
+
+
         public HojaVida Build()
         {
             hojaVida.ReferenciasLaborales.Add(referencia);
             return hojaVida;
+        }
+
+        public class HabilidadesBuilder
+        {
+            private readonly Skills Habilidad = new Skills();
+            private readonly HojaVidaBuilder hojaVidaBuilder;
+            private readonly HojaVida hojaVida;
+            public HabilidadesBuilder(HojaVidaBuilder hvBuilder, HojaVida hv)
+            {
+                hojaVidaBuilder = hvBuilder;
+                hojaVida = hv;
+            }
+            public HabilidadesBuilder AgregarNombre(string nombre)
+            {
+                Habilidad.Nombre = nombre;
+                return this;
+            }
+            public HabilidadesBuilder AgregarDescripcion(string descripcion)
+            {
+                Habilidad.Descripcion = descripcion;
+                return this;
+            }
+
+            public HabilidadesBuilder AgregarHabilidades()
+            {
+                hojaVida.Habilidades.Add(Habilidad);
+                return new HabilidadesBuilder(hojaVidaBuilder, hojaVida);
+            }
+            public HojaVida Build()
+            {
+                hojaVida.Habilidades.Add(Habilidad);
+                return hojaVida;
+            }
         }
     }
 }

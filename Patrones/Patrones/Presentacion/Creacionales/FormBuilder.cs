@@ -148,5 +148,84 @@ namespace Patrones.Presentacion.Creacionales
                                     "Telefono: " + referencias.Telefono + "\n\n";
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var hojaVidaBuilder = new HojaVidaBuilder();
+            HojaVida hojaVida = hojaVidaBuilder
+                .AgregarColegio()
+                    .AgregarNombre("Bachillerato técnico")
+                    .AgregarInstitucion("Colegio Salazar y Herrera")
+                    .AgregarTitulo("Bachiller técnico en ...")
+                    .AgregarFechaGrado(new DateTime(2005, 11, 30))
+                .AgregarEducacionUniversitaria()
+                    .AgregarNombre("Tecnólogía en Sistemas")
+                    .AgregarInstitucion("ITM")
+                    .AgregarTitulo("Tecnólogo en Sistemas de Información")
+                    .AgregarFechaGrado(new DateTime(2008, 11, 15))
+                .AgregarExperienciaLaboral()
+                    .AgregarCargo("Desarrollador")
+                    .AgregarCompañia("InterDesarrollo")
+                    .AgregarFunciones("Programador en ...")
+                    .AgregarFechaInicio(new DateTime(2007, 03, 01))
+                .AgregarReferenciaLaboral()
+                    .AgregarNombre("Paula Rojas")
+                    .AgregarCargo("Líder desarrollo")
+                    .AgregarEmpresa("InterDesarrollo")
+                    .AgregarTelefono("3002547896")
+                .AgregarReferenciaLaboral()
+                    .AgregarNombre("Andrés Botero")
+                    .AgregarCargo("Desarrollador senior")
+                    .AgregarEmpresa("InterDesarrollo")
+                    .AgregarTelefono("3152015247")
+                .AgregarHabilidades()
+                    .AgregarNombre("Manejo de Javascript")
+                    .AgregarDescripcion("Profesional con mas de 5 años de experiencia.")
+                 .AgregarHabilidades()
+                    .AgregarNombre("Manejo de SQLServer")
+                    .AgregarDescripcion("mas de 2 años de experiencia.")
+                .Build();
+
+            //Presentar los resultados en el textbox
+            lblMensaje.Text = "HOJA DE VIDA\nINFORMACIÓN ACADÉMICA";
+            foreach (Educacion educacion in hojaVida.FormacionAcademica)
+            {
+                lblMensaje.Text += "Programa: " + educacion.NombrePrograma +
+                                   "\nInstitución: " + educacion.NombreInstitucion +
+                                   "\nTítulo: " + educacion.Titulo + " - " +
+                                   "\nFecha grado: " + educacion.FechaGrado.ToString("yyyy-MMM") + "\n";
+            }
+            lblMensaje.Text += "\nEXPERIENCIA LABORAL\n";
+            foreach (Trabajo trabajo in hojaVida.ExperienciaLaboral)
+            {
+                lblMensaje.Text += "Cargo: " + trabajo.Cargo + " - " +
+                                    "Funciones: " + trabajo.Funciones + "\n" +
+                                    "Empresa: " + trabajo.Empresa + " - " +
+                                    "Fecha inicio: " + trabajo.FechaInicio.ToString("yyyy-MMM") + "\n";
+                if (trabajo.FechaFin > new DateTime(1920, 1, 1))
+                {
+                    lblMensaje.Text += "Fecha terminación contrato: " +
+                                            trabajo.FechaFin.ToString("yyyy-MMM") + "\n\n";
+                }
+                else
+                {
+                    lblMensaje.Text += "Trabajo actual\n";
+                }
+            }
+            lblMensaje.Text += "\nREFERENCIAS LABORALES\n";
+            foreach (Referencias referencias in hojaVida.ReferenciasLaborales)
+            {
+                lblMensaje.Text += "Nombre: " + referencias.Nombre + "\n " +
+                                    "Cargo  : " + referencias.Cargo + "\n" +
+                                    "Empresa: " + referencias.Empresa + " - " +
+                                    "Telefono: " + referencias.Telefono + "\n\n";
+            }
+            lblMensaje.Text += "\nHABILIDADES\n";
+            foreach (Skills skill in hojaVida.Habilidades)
+            {
+                lblMensaje.Text += "Nombre: " + skill.Nombre + "\n " +
+                                    "Descripcion: " + skill.Descripcion + "\n\n";
+            }
+        }
     }
 }
