@@ -129,6 +129,7 @@
     <Compile Include="Patrones\Creacionales\Abstract Factory\libConexionPostGreSQL.cs" />
     <Compile Include="Patrones\Creacionales\Abstract Factory\libConexionSQL.cs" />
     <Compile Include="Patrones\Creacionales\Abstract Factory\libConexionSQLite.cs" />
+    <Compile Include="Patrones\Creacionales\Builder\libBuilder.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\DatosVehiculo.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\Electrico.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\Hibrido.cs" />
@@ -139,6 +140,12 @@
     </Compile>
     <Compile Include="Presentacion\Creacionales\FormAbstractFactory.Designer.cs">
       <DependentUpon>FormAbstractFactory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Creacionales\FormBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Creacionales\FormBuilder.Designer.cs">
+      <DependentUpon>FormBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Creacionales\FormFactory.cs">
       <SubType>Form</SubType>
@@ -153,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Creacionales\FormAbstractFactory.resx">
       <DependentUpon>FormAbstractFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Creacionales\FormBuilder.resx">
+      <DependentUpon>FormBuilder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Creacionales\FormFactory.resx">
       <DependentUpon>FormFactory.cs</DependentUpon>

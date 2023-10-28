@@ -64,9 +64,12 @@ namespace Patrones.Presentacion.Creacionales
             bUsuario.usuario = usuario;
             string Rpta = bUsuario.Consultar();
             List<Usuario> usuarios = JsonConvert.DeserializeObject<List<Usuario>>(Rpta);
-            txtNombre.Text = usuarios[0].Nombre;
-            txtEmail.Text = usuarios[0].Email;
-            txtCelular.Text = usuarios[0].Celular;
+            if(usuarios.Count > 0)
+            {
+                txtNombre.Text = usuarios[0].Nombre;
+                txtEmail.Text = usuarios[0].Email;
+                txtCelular.Text = usuarios[0].Celular;
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

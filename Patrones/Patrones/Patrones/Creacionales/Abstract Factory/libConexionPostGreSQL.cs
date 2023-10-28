@@ -495,7 +495,7 @@ namespace Patrones.Patrones.Creacionales.Abstract_Factory
         private string strServidor = "localhost";
         private string strBaseDatos = "postgres";
         private string strUsuario = "postgres";
-        private string strClave = "juan08208257";
+        private string strClave = "123456789";
         private string strPuerto = "5432";
         private string strCadenaConexion;
         private string strError;
