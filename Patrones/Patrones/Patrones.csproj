@@ -135,6 +135,8 @@
     <Compile Include="Patrones\Creacionales\Factory Method\Hibrido.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\IVehiculo.cs" />
     <Compile Include="Patrones\Creacionales\Factory Method\VehiculoCreator.cs" />
+    <Compile Include="Patrones\Estructurales\Composite\libComposite.cs" />
+    <Compile Include="Patrones\Estructurales\Facade\libFacade.cs" />
     <Compile Include="Presentacion\Creacionales\FormAbstractFactory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +155,18 @@
     <Compile Include="Presentacion\Creacionales\FormFactory.Designer.cs">
       <DependentUpon>FormFactory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Estructurales\FormComposite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Estructurales\FormComposite.Designer.cs">
+      <DependentUpon>FormComposite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Estructurales\FormFacade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Estructurales\FormFacade.Designer.cs">
+      <DependentUpon>FormFacade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -166,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Creacionales\FormFactory.resx">
       <DependentUpon>FormFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Estructurales\FormComposite.resx">
+      <DependentUpon>FormComposite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Estructurales\FormFacade.resx">
+      <DependentUpon>FormFacade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

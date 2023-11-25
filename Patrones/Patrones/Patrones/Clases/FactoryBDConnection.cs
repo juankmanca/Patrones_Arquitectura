@@ -56,7 +56,6 @@ namespace Patrones.Patrones.Clases
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 int rowsAffected = command.ExecuteNonQuery();
-
                 CloseConnection();
                 return rowsAffected;
             }

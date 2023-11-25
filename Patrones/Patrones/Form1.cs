@@ -1,12 +1,6 @@
 ﻿using Patrones.Presentacion.Creacionales;
+using Patrones.Presentacion.Estructurales;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Patrones
@@ -39,6 +33,18 @@ namespace Patrones
         {
             FormBuilder formBuilder = new FormBuilder();
             formBuilder.Show();
+        }
+
+        private void btnComposite_Click(object sender, EventArgs e)
+        {
+            FormComposite formComposite = new FormComposite();
+            formComposite.Show();
+        }
+
+        private void btnFacade_Click(object sender, EventArgs e)
+        {
+            FormFacade formFacade = new FormFacade();
+            formFacade.Show();
         }
     }
 }

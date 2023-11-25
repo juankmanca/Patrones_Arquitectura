@@ -35,7 +35,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnAbstractFactory = new System.Windows.Forms.Button();
             this.btnFactoryMethod = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnFacade = new System.Windows.Forms.Button();
+            this.btnComposite = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -130,15 +134,55 @@
             this.btnFactoryMethod.UseVisualStyleBackColor = false;
             this.btnFactoryMethod.Click += new System.EventHandler(this.btnFactoryMethod_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnFacade);
+            this.groupBox2.Controls.Add(this.btnComposite);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 191);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(792, 137);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Patrones estructurales";
+            // 
+            // btnFacade
+            // 
+            this.btnFacade.BackColor = System.Drawing.Color.Navy;
+            this.btnFacade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacade.ForeColor = System.Drawing.Color.White;
+            this.btnFacade.Location = new System.Drawing.Point(165, 39);
+            this.btnFacade.Name = "btnFacade";
+            this.btnFacade.Size = new System.Drawing.Size(179, 62);
+            this.btnFacade.TabIndex = 3;
+            this.btnFacade.Text = "FACADE";
+            this.btnFacade.UseVisualStyleBackColor = false;
+            this.btnFacade.Click += new System.EventHandler(this.btnFacade_Click);
+            // 
+            // btnComposite
+            // 
+            this.btnComposite.BackColor = System.Drawing.Color.Navy;
+            this.btnComposite.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComposite.ForeColor = System.Drawing.Color.White;
+            this.btnComposite.Location = new System.Drawing.Point(400, 39);
+            this.btnComposite.Name = "btnComposite";
+            this.btnComposite.Size = new System.Drawing.Size(179, 62);
+            this.btnComposite.TabIndex = 2;
+            this.btnComposite.Text = "COMPOSITE";
+            this.btnComposite.UseVisualStyleBackColor = false;
+            this.btnComposite.Click += new System.EventHandler(this.btnComposite_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 478);
+            this.ClientSize = new System.Drawing.Size(827, 478);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -152,6 +196,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAbstractFactory;
         private System.Windows.Forms.Button btnFactoryMethod;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnFacade;
+        private System.Windows.Forms.Button btnComposite;
     }
 }
 
